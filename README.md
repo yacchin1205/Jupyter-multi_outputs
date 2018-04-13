@@ -1,5 +1,7 @@
 # Introduction
 
+[![Binder](http://mybinder.org/badge.svg)](https://mybinder.org/repo/yacchin1205/Jupyter-multi_outputs/feature/binder-support-2)
+
 This extension enables to keep multiple results as tabs in output_area.
 You can also save/load tabbed outputs as far as this extension is enabled
 As default behavior the "output_area" under a code cell is cleared and over written in each execution.  
