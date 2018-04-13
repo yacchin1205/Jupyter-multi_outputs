@@ -1,7 +1,11 @@
 #!/bin/bash
 set -e
 
+# Installing multi_outputs
 pip install -e .
 
 jupyter nbextension install --py lc_multi_outputs --user
 jupyter nbextension enable --py lc_multi_outputs --user
+
+# For index.ipynb
+pip install pandas matplotlib
