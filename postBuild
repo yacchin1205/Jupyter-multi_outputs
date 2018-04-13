@@ -1,0 +1,7 @@
+#!/bin/bash
+set -e
+
+pip install -e .
+
+jupyter nbextension install --py lc_multi_outputs --user
+jupyter nbextension enable --py lc_multi_outputs --user
