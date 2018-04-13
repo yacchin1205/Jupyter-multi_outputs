@@ -1,6 +1,6 @@
 # Introduction
 
-[![Binder](http://mybinder.org/badge.svg)](https://mybinder.org/repo/yacchin1205/Jupyter-multi_outputs/feature/binder-support-2?filepath=index.ipynb)
+[![Binder](http://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/yacchin1205/Jupyter-multi_outputs/feature/binder-support-2?filepath=index.ipynb)
 
 This extension enables to keep multiple results as tabs in output_area.
 You can also save/load tabbed outputs as far as this extension is enabled
