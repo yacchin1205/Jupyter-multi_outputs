@@ -1,9 +1,3 @@
-require.config({
-  paths: {
-    "diff_match_patch": "../nbextensions/multi_outputs/lib/diff_match_patch"
-  }
-});
-
 define([
     'base/js/namespace',
     'jquery',
@@ -18,7 +12,7 @@ define([
     'codemirror/addon/merge/merge',
     'codemirror/addon/search/searchcursor',
     'codemirror/addon/scroll/annotatescrollbar',
-    'codemirror/addon/search/matchesonscrollbar'
+    'codemirror/addon/search/matchesonscrollbar',
 ], function(Jupyter, $, require, events, jsdialog, configmod, utils, codecell, outputarea, codemirror,
     merge, searchcursor, annotatescrollbar, matchesonscrollbar) {
     "use strict";
