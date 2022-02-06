@@ -20,6 +20,9 @@ if not os.path.exists(LIB):
 with open(os.path.join(LIB, 'diff_match_patch.js'), 'wb') as f:
     f.write(urlopen('https://github.com/google/diff-match-patch/raw/master/javascript/diff_match_patch.js').read())
 
+with open(os.path.join(LIB, 'codemirror-addon-merge.js'), 'wb') as f:
+    f.write(urlopen('https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.56.0/addon/merge/merge.js').read())
+
 setup_args = dict (name='lc-multi-outputs',
       version=VERSION_NS['__version__'],
       description='LC multi outputs extension for Jupyter Notebook',
@@ -34,4 +37,3 @@ setup_args = dict (name='lc-multi-outputs',
 
 if __name__ == '__main__':
     setup(**setup_args)
-

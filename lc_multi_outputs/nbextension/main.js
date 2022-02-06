@@ -12,8 +12,10 @@ define([
     'codemirror/addon/search/searchcursor',
     'codemirror/addon/scroll/annotatescrollbar',
     'codemirror/addon/search/matchesonscrollbar',
+    'nbextensions/multi_outputs/lib/codemirror-addon-merge',
+    'nbextensions/multi_outputs/lib/diff_match_patch',
 ], function(Jupyter, $, require, events, jsdialog, configmod, utils, codecell, outputarea, codemirror,
-    searchcursor, annotatescrollbar, matchesonscrollbar) {
+    searchcursor, annotatescrollbar, matchesonscrollbar, _codemirror_addon_merge, _diff_match_patch) {
     "use strict";
 
     var mod_name = 'MultiOutputs';
