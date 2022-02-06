@@ -9,12 +9,11 @@ define([
     'notebook/js/codecell',
     'notebook/js/outputarea',
     'codemirror/lib/codemirror',
-    'codemirror/addon/merge/merge',
     'codemirror/addon/search/searchcursor',
     'codemirror/addon/scroll/annotatescrollbar',
     'codemirror/addon/search/matchesonscrollbar',
 ], function(Jupyter, $, require, events, jsdialog, configmod, utils, codecell, outputarea, codemirror,
-    merge, searchcursor, annotatescrollbar, matchesonscrollbar) {
+    searchcursor, annotatescrollbar, matchesonscrollbar) {
     "use strict";
 
     var mod_name = 'MultiOutputs';
