@@ -36,4 +36,4 @@ recursive-include lc_multi_outputs *.yml
 recursive-include schema *.json
 recursive-include .vscode *.json
 
-global-exclude lc_multi_outputs/nbextension/lib/diff_match_patch.js
+include lc_multi_outputs/nbextension/lib/diff_match_patch.js
