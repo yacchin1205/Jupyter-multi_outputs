@@ -28,7 +28,7 @@ export function pinOutput(cell: CodeCell): void {
     outputs: values
   };
   setPinnedOutputs(
-    cell.model.metadata,
+    cell.model,
     [...outputs, output].splice(-config.maxPinnedOutputs)
   );
   selectLatestOutputTab(cell.model.metadata);

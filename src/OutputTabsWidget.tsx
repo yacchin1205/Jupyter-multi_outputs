@@ -20,7 +20,7 @@ export class OutputTabsWidget extends ReactWidget {
 
   render(): JSX.Element {
     return (
-      <UseSignal signal={this.cell.model.metadata.changed}>
+      <UseSignal signal={this.cell.model.metadataChanged}>
         {() => {
           const tabs = createTabs(this.cell);
           const selectedIndex = getOutputTabIndex(this.cell.model.metadata);
@@ -89,8 +89,8 @@ function removePinnedOutput(cell: CodeCell, executionCount: number) {
   }
   outputs.splice(index, 1);
   // setだけだとなぜかmetadata.changedが発火されないので一旦削除して作り直す
-  resetPinnedOutputs(cell.model.metadata);
-  setPinnedOutputs(cell.model.metadata, outputs);
+  resetPinnedOutputs(cell.model);
+  setPinnedOutputs(cell.model, outputs);
 
   console.debug('metadata:', getPinnedOutputs(cell.model.metadata));
 }
@@ -133,7 +133,7 @@ function createTabs(cell: CodeCell) {
         const outputArea = new OutputArea({
           model: new OutputAreaModel({
             values: output.outputs,
-            trusted: !!cell.model.metadata.get('trusted')
+            trusted: !!cell.model.metadata['trusted']
           }),
           rendermime: cell.outputArea.rendermime
         });

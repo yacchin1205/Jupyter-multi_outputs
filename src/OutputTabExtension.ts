@@ -35,23 +35,37 @@ export class OutputTabExtension
 }
 
 function initCell(cell: CodeCell) {
-  initOutputTabs(cell);
-  // アウトプットの初期化
-  outputAreaWithPinButton(cell.outputArea, () => {
-    pinOutput(cell);
-  });
-  // アウトプットの変更時
-  cell.outputArea.model.changed.connect((_, args) => {
-    if (args.type === 'add') {
-      outputAreaWithPinButton(cell.outputArea, () => {
-        pinOutput(cell);
-      });
-    }
+  waitForConnected(cell, () => {
+    initOutputTabs(cell);
+    // アウトプットの初期化
+    outputAreaWithPinButton(cell.outputArea, () => {
+      pinOutput(cell);
+    });
+    // アウトプットの変更時
+    cell.outputArea.model.changed.connect((_, args) => {
+      if (args.type === 'add') {
+        outputAreaWithPinButton(cell.outputArea, () => {
+          pinOutput(cell);
+        });
+      }
+    });
   });
 }
 
 function initOutputTabs(cell: CodeCell) {
   Widget.attach(new OutputTabsWidget(cell), cell.node);
+}
+
+function waitForConnected(cell: CodeCell, handler: () => void) {
+  if (!cell.node.isConnected) {
+    console.log('WAITING...', cell);
+    setTimeout(() => {
+      waitForConnected(cell, handler);
+    }, 100);
+    return;
+  }
+  console.log('ATTACHED');
+  handler();
 }
 
 function getCellByModelId(notebook: Notebook, cellModelId: string) {
