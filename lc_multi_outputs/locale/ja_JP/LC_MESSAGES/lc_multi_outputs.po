@@ -1,0 +1,35 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: lc_multi_outputs 2.2.0.rc1\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2024-05-11 10:45+0900\n"
+"PO-Revision-Date: 2024-05-11 10:35+0900\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: ja_JP <LL@li.org>\n"
+"Language: ja_JP\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"Generated-By: Babel 2.14.0\n"
+
+msgctxt "settings"
+msgid "Max Pinned Outputs"
+msgstr "ピンできる最大出力数"
+
+msgctxt "schema"
+msgid "LC Multi Outputs"
+msgstr ""
+
+#: src/components/SearchBar.tsx:20
+msgid "Search: "
+msgstr "検索: "
+
+#: src/components/SearchBar.tsx:22
+msgid "Search"
+msgstr "検索"
+
+#: src/showOutputAreaDiffDialog.ts:39
+msgid "Close"
+msgstr "閉じる"
