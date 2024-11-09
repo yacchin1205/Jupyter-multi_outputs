@@ -46,7 +46,10 @@ test('should save current outputs on clicking the pin button', async ({
   page
 }) => {
   // create new notebook
+  const fileName = "Untitled.ipynb";
   await page.notebook.createNew();
+  await page.waitForSelector(`[role="main"] >> text=${fileName}`);
+
   // edit
   await page.notebook.setCell(0, 'code', 'print("test")');
   // run
